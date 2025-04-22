@@ -1,0 +1,55 @@
+
+<!-- -------------------------------------------------------------------------- -->
+
+<section className="bg-transparent">
+    <div className="relative flex w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+      <div className="relative mx-4 mt-4 h-96 overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700">
+        <Swiper
+          modules={[Navigation, A11y, Autoplay]}
+          autoplay={{ delay: 3000 }}
+          loop
+          spaceBetween={50}
+          slidesPerView={1}
+        >
+          {product.images.map((image, index) => (
+            <SwiperSlide key={index}>
+              <img
+                src={image.url}
+                alt={`Productimg ${index + 1}`}
+                className=" w-full object-cover"
+                loading="lazy"
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+      <div className="p-6">
+        <div className="mb-2 flex items-center justify-between">
+          <p className="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
+            {product.name}
+          </p>
+          <p className="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
+            ₹ {product.price}
+          </p>
+        </div>
+        <p className="block !line-clamp-5 font-sans text-sm font-normal leading-normal text-gray-700 antialiased">
+          {product.description}
+        </p>
+      </div>
+      <div className="p-6 pt-0">
+        <button
+          className="block w-full select-none rounded-lg bg-blue-gray-900/10 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-blue-gray-900 transition-all hover:scale-105 focus:scale-105 focus:opacity-[0.85] active:scale-100 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+          type="button"
+          onClick={setItemToCart}
+        >
+          Add to Cart
+        </button>
+        <Link
+          to={`products/${product._id}`}
+          className="block w-full mt-3 font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased uppercase text-center transition-all border border-blue-gray-900 rounded-lg hover:bg-blue-gray-900 hover:text-gray-400 focus:outline-none focus:bg-blue-gray-900 focus:text-white active:bg-blue-gray-800 active:text-white disabled:pointer-events-none disabled:bg-blue-gray-900 disabled:text-white"
+        >
+          Know More
+        </Link>
+      </div>
+    </div>
+  </section>

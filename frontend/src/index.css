@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Bahnschrift";
+  src:
+    url("./font/woff2/bahnschrift.woff2") format("woff2"),
+    url("./font/bahnschrift.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Calibri";
+  src:
+    url("./font/woff2/bahnschrift.woff2") format("woff2"),
+    url("./font/calibri.woff") format("woff");
+}
+
+.font-bcf {
+  font-family: "Lato", sans-serif;
+}
+
+.font-calibri {
+  font-family: "Lato", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #030712; /* Dark mode background color */
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 35px;
+}
+
+[data-test="table"] {
+  overflow-x: auto !important;
+}

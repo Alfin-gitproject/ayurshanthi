@@ -1,0 +1,81 @@
+:root {
+  --primary-color-light: #000; /* Default color for light mode */
+  --primary-color-dark: #fff; /* Default color for dark mode */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color-light: #fff; /* Color for light mode */
+    --primary-color-dark: #000; /* Color for dark mode */
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 25px;
+  margin-bottom: 25px;
+}
+
+.dataTables_wrapper {
+  color: var(--primary-color-light);
+}
+
+[data-test="table-foot"] {
+  display: none;
+}
+
+[data-test="datatable-head"] {
+  font-size: 15px;
+  color: var(--primary-color-light);
+}
+
+.dataTables_wrapper .mdb-datatable-filter input[type="text"] {
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #9d9d9e;
+}
+
+.custom-select {
+  background-color: gray;
+}
+
+@media (max-width: 767px) {
+  .dataTables_wrapper .mdb-datatable-filter input[type="text"] {
+    width: 140px;
+  }
+}
+
+.dataTables_info {
+  color: var(--primary-color-light);
+}
+
+.table {
+  border-radius: 10px; /* Removed !important */
+}
+
+/* Default table styles */
+.table-bordered {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Border styles for table cells */
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid #9d9d9e; /* Default border color */
+  padding: 0.75rem; /* Default padding */
+  vertical-align: top; /* Align content to the top by default */
+}
+
+/* Border styles for table header cells */
+.table-bordered th {
+  border-top-width: 2px; /* Increase border width for header cells */
+  text-align: left; /* Align text to the left by default */
+}
+
+.active .page-item {
+  background-color: #10b981 !important;
+}
