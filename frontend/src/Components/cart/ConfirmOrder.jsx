@@ -22,7 +22,7 @@ const ConfirmOrder = () => {
   const [couponValue, setCouponValue ] = useState(null)
   const [discountApplied, setDiscountApplied] = useState(false);
   const [checkCoupon, { isLoading, error, isSuccess , data }] =  useCheckCouponMutation();
-  const { itemsPrice, shippingPrice, taxPrice, totalPrice } = calculateOrderCostWithOffer(cartItems,couponValue);
+  const { itemsPrice,  taxPrice, totalPrice } = calculateOrderCostWithOffer(cartItems,couponValue);
   const handleButtonClick = (newState) => {
     setMethodState(newState);
   };
