@@ -118,14 +118,14 @@ const ConfirmOrder = () => {
                       ₹{itemsPrice}
                     </p>
                   </div>
-                  <div className="flex items-center justify-between gap-4 mb-5">
+                  {/* <div className="flex items-center justify-between gap-4 mb-5">
                     <p className="font-normal text-lg leading-8 transition-all duration-500 group-hover">
                       Shipping
                     </p>
                     <p className="font-medium text-lg leading-8">
                       ₹{0}
                     </p>
-                  </div>
+                  </div> */}
                   <div className="flex items-center justify-between gap-4 mb-5">
                     <p className="font-normal text-lg leading-8 transition-all duration-500 group-hover">
                       Tax Price
