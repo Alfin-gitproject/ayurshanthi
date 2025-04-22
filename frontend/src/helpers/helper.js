@@ -76,7 +76,7 @@ export const calculateOrderCostWithOffer = (cartItems, couponValue) => {
   const itemsPrice = itemsPriceWithoutTaxReduced - itemsPriceWithoutTaxReduced * 0.18;
   const shippingPrice = itemsPrice > 200 ? 0 : 40;
   const taxPrice = Number((0.18 * itemsPriceWithoutTaxReduced).toFixed(2));
-  let totalPrice = (itemsPrice + shippingPrice + taxPrice).toFixed(2);
+  let totalPrice = (itemsPrice  + taxPrice).toFixed(2);
   
   if (couponValue) {
     totalPrice = (Number(totalPrice) - couponValue).toFixed(2);

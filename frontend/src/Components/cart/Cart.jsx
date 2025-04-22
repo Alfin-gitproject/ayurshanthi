@@ -11,8 +11,8 @@ const Cart = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const [couponCode, setCouponCode] = useState(null);
-  const [couponValue, setCouponValue] = useState(null);
+  const [couponCode, setCouponCode] = useState("");
+  const [couponValue, setCouponValue] = useState(0);
   const [discountApplied, setDiscountApplied] = useState(false);
   const { cartItems } = useSelector((state) => state.cart);
 
@@ -24,10 +24,10 @@ const Cart = () => {
     checkAndApplyCoupon({ code: couponCode });
   };
 
-  // Function to calculate the subtotal with discount applied after the first product
+  // Function to calculate the gross subtotal (itemsPriceWithoutTaxReduced)
   const calculateSubtotal = () => {
     return cartItems.reduce((acc, item) => {
-      // Special case for the specific product ID
+      if (!item || !item.price || !item.quantity) return acc;
       if (item.product === "6632450450b3e83d0b476637") {
         const firstItemPrice = item.price;
         const secondItemPrice = item.price * 0.90;
@@ -49,8 +49,7 @@ const Cart = () => {
         return acc + Number(itemTotal.toFixed(2));
       }
 
-      // Default case for other products
-      const fullPriceTotal = item.price || 0; // Fallback to 0 if price is undefined
+      const fullPriceTotal = item.price || 0;
       const discountedPriceTotal =
         item.quantity > 1
           ? (item.quantity - 1) * item.price * (1 - (item?.offer || 0) / 100)
@@ -63,7 +62,7 @@ const Cart = () => {
 
   // Function to calculate the discounted price for a single item
   const calculateDiscountedPrice = (item) => {
-    if (!item || !item.price || !item.quantity) return "0.00"; // Guard against undefined values
+    if (!item || !item.price || !item.quantity) return "0.00";
 
     if (item.product === "6632450450b3e83d0b476637") {
       const firstItemPrice = item.price;
@@ -86,7 +85,6 @@ const Cart = () => {
       return totalPrice.toFixed(2);
     }
 
-    // For other products
     const fullPriceTotal = item.price;
     const discountedPriceTotal =
       item.quantity > 1
@@ -97,11 +95,35 @@ const Cart = () => {
     return totalPrice.toFixed(2);
   };
 
-  const subtotal = calculateSubtotal();
-  const taxes = subtotal * 0.18;
-  const shipping = 0;
-  const couponDiscount = discountApplied ? couponValue || 0 : 0;
-  const total = subtotal + taxes + shipping - couponDiscount;
+  // Backend-aligned calculations (without shipping)
+  const itemsPriceWithoutTaxReduced = calculateSubtotal();
+  const itemsPrice = itemsPriceWithoutTaxReduced - itemsPriceWithoutTaxReduced * 0.18;
+  const shippingPrice = 0; // Shipping fee removed
+  const taxPrice = Number((0.18 * itemsPriceWithoutTaxReduced).toFixed(2));
+  let total = Number((itemsPrice + taxPrice).toFixed(2));
+  if (couponValue) {
+    total = Number((total - couponValue).toFixed(2));
+  }
+
+  // Debug logging
+  console.log("Cart Calculations:", {
+    cartItems,
+    itemsPriceWithoutTaxReduced,
+    itemsPrice,
+    shippingPrice,
+    taxPrice,
+    couponValue,
+    total,
+    expectedExample: {
+      twoSpecialItems: {
+        itemsPriceWithoutTaxReduced: 190,
+        itemsPrice: Number((190 * 0.82).toFixed(2)), // 155.80
+        shippingPrice: 0, // Shipping removed
+        taxPrice: Number((0.18 * 190).toFixed(2)), // 34.20
+        total: couponValue ? Number((155.80 + 34.20 - couponValue).toFixed(2)) : 190.00
+      }
+    }
+  });
 
   const increaseQty = (item, quantity) => {
     const newQty = Number(quantity) + 1;
@@ -156,11 +178,18 @@ const Cart = () => {
         const roundedDiscountedAmount = parseFloat(discountedAmount.toFixed(2));
         setCouponValue(roundedDiscountedAmount);
         setDiscountApplied(true);
+      } else if (data?.coupon?.discountType === "fixed") {
+        const roundedDiscountedAmount = parseFloat(data?.coupon?.discountValue.toFixed(2));
+        setCouponValue(roundedDiscountedAmount);
+        setDiscountApplied(true);
       }
     }
 
     if (error) {
       toast.error("Error Applying Coupon Code");
+      setCouponCode("");
+      setCouponValue(0);
+      setDiscountApplied(false);
     }
   }, [data, isSuccess, total, discountApplied, error]);
 
@@ -248,20 +277,20 @@ const Cart = () => {
                     <h2 className="text-lg font-semibold mb-4">Summary</h2>
                     <div className="flex justify-between mb-2">
                       <span>Subtotal</span>
-                      <span>₹{subtotal.toFixed(2)}</span>
+                      <span>₹{itemsPrice.toFixed(2)}</span>
                     </div>
                     <div className="flex justify-between mb-2">
                       <span>Taxes</span>
-                      <span>₹{taxes.toFixed(2)}</span>
+                      <span>₹{taxPrice.toFixed(2)}</span>
                     </div>
                     <div className="flex justify-between mb-2">
                       <span>Shipping</span>
-                      <span>₹{shipping.toFixed(2)}</span>
+                      <span>₹{shippingPrice.toFixed(2)}</span>
                     </div>
                     {discountApplied && (
                       <div className="flex justify-between mb-2">
                         <span>Coupon Applied</span>
-                        <span>-₹{couponValue?.toFixed(2)}</span>
+                        <span>-₹{couponValue.toFixed(2)}</span>
                       </div>
                     )}
                     <hr className="my-2" />
@@ -296,7 +325,7 @@ const Cart = () => {
                     </div>
                     <button
                       onClick={checkoutHandler}
-                      className="bg-green-800 hover:bg-slate-700/90 text-white py-2 px-4 rounded-lg mt-4 w-full"
+                      className="bg-green-800 hover:bg-slate-717/90 text-white py-2 px-4 rounded-lg mt-4 w-full"
                     >
                       Checkout
                     </button>

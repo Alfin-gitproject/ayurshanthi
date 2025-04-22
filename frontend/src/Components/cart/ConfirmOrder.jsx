@@ -123,7 +123,7 @@ const ConfirmOrder = () => {
                       Shipping
                     </p>
                     <p className="font-medium text-lg leading-8">
-                      ₹{shippingPrice}
+                      ₹{0}
                     </p>
                   </div>
                   <div className="flex items-center justify-between gap-4 mb-5">
