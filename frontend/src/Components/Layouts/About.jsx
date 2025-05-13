@@ -41,8 +41,8 @@ const About = () => {
       <section className="bg-gray-100">
         <motion.div
           variants={variants}
-          initial={"hidden"}
-          whileInView={"show"}
+          initial="hidden"
+          whileInView="show"
           viewport={{ once: true }}
           className="text-center block relative z-20 mx-auto pt-8"
         >
@@ -53,7 +53,7 @@ const About = () => {
             Revolutionizing Health Naturally
           </motion.h1>
           <motion.p
-            className="text-lg w-full md:w-3/4 mx-auto font-light text-gray-700 font-calibri"
+            className="text-lg w-full md:w-3/4 mx-auto font-light text-gray-700 font-calibri mb-6"
             variants={item}
           >
             inHerbz Health care is a pioneering company in the research,
@@ -64,6 +64,24 @@ const About = () => {
             formulations, adhering to GMP (Good Manufacturing Practices)
             standards in our production unit, ensuring high-quality products for
             the Indian and international markets.
+          </motion.p>
+          <motion.h1
+            className="text-5xl my-2 text-gray-950 font-bcf font-bold"
+            variants={item}
+          >
+            The Ancient Art of Healing
+          </motion.h1>
+          <motion.p
+            className="text-lg w-full md:w-3/4 mx-auto font-light text-gray-700 font-calibri"
+            variants={item}
+          >
+            At Ayur Shoppee, we harmoniously blend the profound insights of
+            ancient Ayurveda and Jyothisham with contemporary scientific
+            understanding. Our approach honors the time-tested wisdom found in
+            rare manuscripts and oral traditions while embracing modern
+            innovations that enhance their effectiveness. This unique synthesis
+            creates wellness solutions that are both deeply rooted in tradition
+            and perfectly adapted to modern life.
           </motion.p>
         </motion.div>
         <motion.div className="gap-16 items-center py-4 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-8 lg:px-6">
@@ -105,6 +123,7 @@ const About = () => {
               potent botanicals meticulously sourced from the finest
               ingredients.
             </motion.p>
+
             {/* <motion.button
               variants={item}
               className="bt relative inline-flex items-center justify-center p-0.5 my-4 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-600 to-red-600 group-hover:from-red-700 group-hover:to-red-700 hover:text-white focus:ring-4 focus:outline-none focus:ring-red-200 dark:focus:ring-red-800"
@@ -135,6 +154,30 @@ const About = () => {
               alt="office content 2"
             />
           </motion.div>
+        </motion.div>
+        <motion.div className="items-center py-4 px-4 mx-auto max-w-screen-xl lg:py-8 lg:px-6 flex flex-col gap-4">
+          <motion.h1
+            className="mb-2 text-4xl tracking-tight text-gray-900 font-bcf font-medium"
+            variants={item}
+          >
+            About Ayur Shoppee
+          </motion.h1>
+          <motion.p
+            variants={item}
+            className="mb-4 font-light text-lg font-calibri text-gray-800"
+          >
+            Ayur Shoppee, under the banner of Ayur Shanthi, established in 1960,
+            carries forward a 400-year-old legacy rooted in the esteemed Vaidyan
+            Musaliar Madam. Renowned for blending ancient Ayurvedic wisdom with
+            Jyothisham, we craft products that harmonise traditional knowledge
+            from ancient texts with modern scientific advancements, ensuring
+            authenticity and efficacy. Headquartered in Kerala, India, Ayur
+            Shoppee is a global online trading leader, offering a diverse range
+            of 100% natural products. From wellness and beauty to home and auto
+            care, our exclusive online platform, backed by the World Central
+            Digital Reservation System (WCDRS), delivers unparalleled
+            convenience and quality to customers worldwide.
+          </motion.p>
         </motion.div>
         <motion.div className="gap-16 items-center py-4 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-8 lg:px-6">
           <motion.div
@@ -221,6 +264,34 @@ const About = () => {
               </span>
             </motion.button> */}
           </motion.div>
+        </motion.div>
+        <motion.div className="items-center py-4 px-4 mx-auto max-w-screen-xl lg:py-8 lg:px-6 flex flex-col gap-4">
+          <motion.h1
+            className="mb-2 text-4xl tracking-tight text-gray-900 font-bcf font-medium"
+            variants={item}
+          >
+            Exceed Your Expectations
+          </motion.h1>
+          <motion.p
+            variants={item}
+            className="mb-4 font-light text-lg font-calibri text-gray-800"
+          >
+            At Ayur Shoppee, our passion drives us to exceed customer
+            expectations. Guided by our Managing Director’s commitment to 100%
+            natural products, we ensure safety for humans, animals, and the
+            environment, fostering trust through ethical practices. Proudly
+            “Made in India,” we curate innovative, trendsetting products
+            globally while cherishing our heritage. Our unique brands, like Ayur
+            Santhi and Dr. Kalonji, reflect our dedication to quality and
+            authenticity, enriching lives with every offering. Our vibrant
+            culture, rooted in integrity and accountability, empowers our team
+            to deliver exceptional value. We operate in harmony with nature,
+            promoting health, prosperity, and well-being for all. Through our
+            global network, we invite entrepreneurs to join our journey. With
+            comprehensive support, including business plans and training, we
+            help establish successful Ayur Shoppee outlets worldwide, ensuring
+            shared success.
+          </motion.p>
         </motion.div>
       </section>
       <Mission />

@@ -67,6 +67,24 @@ const AboutHome = () => {
             </span>
           </Link>
         </motion.button>
+        <motion.h1
+            className="mb-2 text-4xl tracking-tight text-gray-900 font-bcf font-medium"
+          variants={item}
+        >
+          The Sacred Legacy of Vaidyan Musaliar Wisdom
+        </motion.h1>
+        <motion.p
+         className="text-lg w-full md:w-3/4 mx-auto font-medium p-3 text-gray-700 font-calibri"
+          variants={item}
+        >
+          Ayur Shanthi, established in 1960, stands as a living testament to a
+          profound legacy spanning over 400 years. Rooted in the venerable
+          traditions of Vaidyan musaliar madam, our practices represent an
+          unbroken lineage of authentic Ayurvedic wisdom passed down through
+          generations. This sacred knowledge, preserved through centuries of
+          dedicated scholarship and practice, now finds new expression through
+          Ayur Shoppee.
+        </motion.p>
       </motion.div>
     </div>
   );
