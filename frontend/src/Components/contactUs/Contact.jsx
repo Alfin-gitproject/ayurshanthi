@@ -40,7 +40,7 @@ const Contact = () => {
                     Our Address
                   </h3>
                   <p class="text-gray-700 dark:text-slate-700  normal-case">
-                    inherbz Health Care LLP PWD Road,
+                     Health Care LLP PWD Road,
                   </p>
                   <p class="text-gray-700 dark:text-slate-700  normal-case">
                     Near SN Jn, Nettoor(P.0), Marad,
@@ -74,10 +74,10 @@ const Contact = () => {
                     Contact
                   </h3>
                   <p class="text-gray-700 dark:text-slate-700 ">
-                    Mobile:+91 9738 105 105
+                    Mobile:+91 7034035102
                   </p>
                   <p class="text-gray-700 dark:text-slate-700 ">
-                    Email: hello@inherbz.com
+                    Info@ayurshoppee.com
                   </p>
                 </div>
               </li>

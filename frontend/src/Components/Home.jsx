@@ -160,14 +160,14 @@ function Home() {
     <>
       <Metadata title={"Natural Products Online"} />
       <div>
-        {!keyword && <Banners />}
+        {/* {!keyword && <Banners />} */}
         {!keyword && <AboutHome />}
         <section
           id="products"
           className="bg-gradient-to-b from-gray-200 to-gray-50"
         >
           {/* Large and Visually Appealing Search Bar and Category Filter */}
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 py-4 max-w-3xl mx-auto">
+          {/* <div className="flex flex-col sm:flex-row justify-center items-center gap-4 py-4 max-w-3xl mx-auto">
             <form onSubmit={handleSearch} className="w-full sm:w-64">
               <div className="relative">
                 <input
@@ -209,7 +209,7 @@ function Home() {
                 ? `${products.length} Products found with this Keyword: ${keyword}`
                 : "All Products"}
             </h1>
-          </div>
+          </div> */}
           <div
             className={`flex justify-center py-3 ${keyword ? "w-[90%]" : ""} mx-auto w-full`}
           >

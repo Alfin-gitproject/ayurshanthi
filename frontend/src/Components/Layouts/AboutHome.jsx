@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
 
 const AboutHome = () => {
-  const { ref, inView } = useInView({ amount: 0.5 });
+  const { ref, } = useInView({ amount: 0.5 });
 
   const variants = {
     hidden: {
