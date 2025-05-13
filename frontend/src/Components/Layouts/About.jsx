@@ -205,7 +205,7 @@ const About = () => {
             initial={"hidden"}
             whileInView={"show"}
             viewport={{ once: true }}
-            className="font-light text-gray-500 sm:text-lg dark:text-gray-400"
+            className=" font-light text-gray-500 sm:text-lg dark:text-gray-400 "
           >
             <motion.h2
               variants={item}
