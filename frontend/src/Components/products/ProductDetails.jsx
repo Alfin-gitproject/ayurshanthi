@@ -250,12 +250,12 @@ const ProductDetails = () => {
               <p className="text-sm text-gray-700 line-clamp-3">
                 {product.description?.text}
               </p>
-              <p className="text-sm text-gray-700 line-clamp-3">
+              {/* <p className="text-sm text-gray-700 line-clamp-3">
                 {product.description?.benefits}
               </p>
               <p className="text-sm text-gray-700 line-clamp-3">
                 {product.description?.usage}
-              </p>
+              </p> */}
 
               {/* Add margin to create a line of space */}
               <div className="mt-4">

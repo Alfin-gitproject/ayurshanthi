@@ -165,15 +165,15 @@ function ProductItem({ product }) {
             >
               {product.name}
             </Link>
-            {/* <p className="text-sm text-gray-700 line-clamp-3">
+              <p className="text-sm text-gray-700 line-clamp-3">
               {product.description?.text }
             </p>
-            <p className="text-sm text-gray-700 line-clamp-3" >
+            {/* <p className="text-sm text-gray-700 line-clamp-3" >
               {product.description?.benefits}
             </p>
             <p className="text-sm text-gray-700 line-clamp-3" >
               {product.description?.usage}
-            </p> */}
+            </p>   */}
           </Link>
           
           <div className="flex items-center">

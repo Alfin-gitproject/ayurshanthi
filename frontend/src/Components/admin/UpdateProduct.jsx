@@ -12,7 +12,11 @@ const UpdateProduct = ({ productId, closeModal }) => {
   const navigate = useNavigate();
   const [product, setProduct] = useState({
     name: "",
-    description: "",
+description: {
+      text: "",
+      benefits: "",
+      usage: ""
+    },
     price: "",
     actualPrice: "",
     category: "",
@@ -33,7 +37,11 @@ const UpdateProduct = ({ productId, closeModal }) => {
     if (data?.productById) {
       setProduct({
         name: data?.productById?.name,
-        description: data?.productById?.description,
+  description: {
+        text: data?.productById?.description?.text || "", // Existing text field
+        benefits: data?.productById?.description?.benefits || "", 
+        usage:data?.productById?.description?.usage || "",
+  },
         price: data?.productById?.price,
         actualPrice: data?.productById?.actualPrice,
         category: data?.productById?.category,
@@ -51,13 +59,26 @@ const UpdateProduct = ({ productId, closeModal }) => {
       closeModal();
     }
   }, [error, isSuccess, data, navigate, closeModal]);
-  const onChange = (e) => {
-    const { name, value } = e.target;
-    setProduct((prevProduct) => ({
-      ...prevProduct,
-      [name]: value,
+ const onChange = (e) => {
+  const { name, value } = e.target;
+  
+  // Handle nested description fields
+  if (name === "text" || name === "benefits" || name === "usage") {
+    setProduct(prev => ({
+      ...prev,
+      description: {
+        ...prev.description,
+        [name]: value
+      }
     }));
-  };
+  } else {
+    // Handle regular fields
+    setProduct(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  }
+};
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -200,7 +221,7 @@ const UpdateProduct = ({ productId, closeModal }) => {
                 <textarea
                   id="description"
                   name="description"
-                  value={description}
+                  value={description.text}
                   onChange={onChange}
                   rows={4}
                   className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
@@ -217,7 +238,7 @@ const UpdateProduct = ({ productId, closeModal }) => {
                 <textarea
                   id="benefits"
                   name="benefits"
-                  value={Benefits}
+                  value={description.benefits}
                   onChange={onChange}
                   rows={4}
                   className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
@@ -225,7 +246,24 @@ const UpdateProduct = ({ productId, closeModal }) => {
                 />
               </div>
               
-                 
+                 <div className="sm:col-span-2">
+                <label
+                  htmlFor="description"
+                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
+                 Usage instructions
+                </label>
+                <textarea
+                  id="usage"
+                  name="usage"
+                  value={description.usage}
+                  onChange={onChange}
+                  rows={4}
+                  className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                  placeholder="Write product usage instruction   here"
+                />
+              </div>
+              
             </div>
             <button
               type="submit"

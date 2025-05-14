@@ -8,13 +8,15 @@
     "start": "node backend/app.js",
     "dev": "NODE_ENV=DEVELOPMENT nodemon backend/app.js",
     "prod": "NODE_ENV=PRODUCTION nodemon backend/app.js",
-    "seeder": "node backend/seeder/seeder.js"
+    "seeder": "node backend/seeder/seeder.js",
+    "tunnel":"cloudflared tunnel --url http://localhost:8080"
   },
   "author": "Nivin",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
     "bcryptjs": "^2.4.3",
+    "cloudflared": "^0.7.0",
     "cloudinary": "^1.41.3",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",

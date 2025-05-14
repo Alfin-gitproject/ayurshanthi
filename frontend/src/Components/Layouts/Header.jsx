@@ -78,7 +78,7 @@ function Header() {
 
   const totalProductPrice = calculateSubtotal();
   return (
-    <div className="sticky bg-orange-200 bg-blend-multiply bg-opacity-95 top-0 z-50">
+    <div className="sticky bg-gray-300 bg-blend-multiply bg-opacity-95 top-0 z-50">
       <div className="py-4 pl-8 pr-10 navbar">
         {/* Logo */}
         <div className="flex-none">

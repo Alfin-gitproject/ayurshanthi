@@ -42,7 +42,7 @@ const NewProduct = () => {
 
   const onChange = (e) => {
     const { name, value } = e.target;
-    if (name === "description" || name === "benefits" || name === "usage") {
+    if (name === "text" || name === "benefits" || name === "usage") {
       setProduct({
         ...product,
         description: {
@@ -210,7 +210,7 @@ const NewProduct = () => {
               </label>
               <textarea
                 id="description"
-                name="description"
+                name="text"
                 value={description.text}
                 onChange={onChange}
                 rows={4}
