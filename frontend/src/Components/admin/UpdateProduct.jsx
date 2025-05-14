@@ -220,7 +220,7 @@ description: {
                 </label>
                 <textarea
                   id="description"
-                  name="description"
+                  name="text"
                   value={description.text}
                   onChange={onChange}
                   rows={4}
