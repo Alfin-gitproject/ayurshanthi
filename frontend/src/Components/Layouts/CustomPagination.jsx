@@ -11,7 +11,6 @@ const CustomPagination = ({ resPerPage, filteredProductsCount, currentPage, onPa
 
   const renderPageNumbers = () => {
     const pageNumbers = [];
-    // Adjust max pages to show based on screen size
     const maxPagesToShow = window.innerWidth < 640 ? 3 : 5; // 3 pages on mobile, 5 on larger screens
     let startPage = Math.max(1, currentPage - Math.floor(maxPagesToShow / 2));
     let endPage = Math.min(totalPages, startPage + maxPagesToShow - 1);
@@ -43,7 +42,7 @@ const CustomPagination = ({ resPerPage, filteredProductsCount, currentPage, onPa
 
   return (
     <div
-      className="flex justify-center items-center gap-0.5 sm:gap-1 py-2 sm:py-4 flex-wrap"
+      className="flex justify-center items-center gap-0.5 sm:gap-1 md:gap-2 py-2 sm:py-3 md:py-4 flex-wrap"
       role="navigation"
       aria-label="Pagination"
     >
@@ -51,7 +50,7 @@ const CustomPagination = ({ resPerPage, filteredProductsCount, currentPage, onPa
       <button
         onClick={() => handlePageClick(1)}
         disabled={currentPage === 1}
-        className={`px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-md text-xs sm:text-sm transition-colors ${
+        className={`px-1.5 sm:px-2 md:px-3 py-0.5 sm:py-1 rounded-md text-xs sm:text-sm transition-colors ${
           currentPage === 1
             ? "bg-gray-300 text-gray-500 cursor-not-allowed"
             : "bg-green-800 text-white hover:bg-slate-800"
@@ -66,7 +65,7 @@ const CustomPagination = ({ resPerPage, filteredProductsCount, currentPage, onPa
       <button
         onClick={() => handlePageClick(currentPage - 1)}
         disabled={currentPage === 1}
-        className={`px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-md text-xs sm:text-sm transition-colors ${
+        className={`px-1.5 sm:px-2 md:px-3 py-0.5 sm:py-1 rounded-md text-xs sm:text-sm transition-colors ${
           currentPage === 1
             ? "bg-gray-300 text-gray-500 cursor-not-allowed"
             : "bg-green-800 text-white hover:bg-slate-800"
@@ -84,7 +83,7 @@ const CustomPagination = ({ resPerPage, filteredProductsCount, currentPage, onPa
       <button
         onClick={() => handlePageClick(currentPage + 1)}
         disabled={currentPage === totalPages}
-        className={`px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-md text-xs sm:text-sm transition-colors ${
+        className={`px-1.5 sm:px-2 md:px-3 py-0.5 sm:py-1 rounded-md text-xs sm:text-sm transition-colors ${
           currentPage === totalPages
             ? "bg-gray-300 text-gray-500 cursor-not-allowed"
             : "bg-green-800 text-white hover:bg-slate-800"
@@ -99,7 +98,7 @@ const CustomPagination = ({ resPerPage, filteredProductsCount, currentPage, onPa
       <button
         onClick={() => handlePageClick(totalPages)}
         disabled={currentPage === totalPages}
-        className={`px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-md text-xs sm:text-sm transition-colors ${
+        className={`px-1.5 sm:px-2 md:px-3 py-0.5 sm:py-1 rounded-md text-xs sm:text-sm transition-colors ${
           currentPage === totalPages
             ? "bg-gray-300 text-gray-500 cursor-not-allowed"
             : "bg-green-800 text-white hover:bg-slate-800"
