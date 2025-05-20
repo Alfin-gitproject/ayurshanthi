@@ -24,7 +24,7 @@ const Refund = () => {
           <h2 className="text-xl font-bold mb-4">2. Process for Returns:</h2>
           <p className="mb-8">
             - To initiate a return, please contact our customer service team at{" "}
-            <a href="info@ayurshoppee.com" className="text-blue-400">
+            <a href="mailto:info@ayurshoppee.com" className="text-blue-400">
              info@ayurshoppee.com
             </a>
             .
@@ -71,7 +71,7 @@ const Refund = () => {
         <p className="text-sm text-gray-400">
           If you have any questions or concerns about our return and refund
           policy, please don't hesitate to contact us at{" "}
-          <a href="info@ayurshoppee.com" className="text-blue-400">
+          <a href="mailto:info@ayurshoppee.com" className="text-blue-400">
       info@ayurshoppee.com
           </a>
           . Our customer service team is here to assist you.
