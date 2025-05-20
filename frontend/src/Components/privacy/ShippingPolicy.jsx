@@ -61,7 +61,7 @@ const ShippingPolicy = () => {
             Your satisfaction is our top priority. For detailed information on
             our return and refund procedures, please refer to our dedicated{" "}
             <a
-              href="https://shop.ayurshanthi.com/return_and_refund"
+              href="/return_and_refund"
               className="text-blue-500 hover:underline"
             >
               Return and Refund Policy
