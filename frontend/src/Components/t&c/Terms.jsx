@@ -10,13 +10,13 @@ const Terms = () => {
         <h2 className="text-4xl py-3">Terms and Conditions</h2>
         <p>
           These terms and conditions outline the rules and regulations for the
-          use of {/* */}inherbz Health Care LLP{/* */}'s Website, located at{" "}
-          {/* */}shop.inherbz.com
+          use of {/* */}AYURSHOPPEE ENTEURPRISES{/* */}'s Website, located at{" "}
+          {/* */}shop.ayurshoppee.com
           {/* */}.
         </p>
         <p>
           By accessing this website we assume you accept these terms and
-          conditions. Do not continue to use {/* */}shop.inherbz.com{/* */} if
+          conditions. Do not continue to use {/* */}shop.ayurshoppee.com{/* */} if
           you do not agree to take all of the terms and conditions stated on
           this page.
         </p>
@@ -38,7 +38,7 @@ const Terms = () => {
         </p>
         <h3 className="py-4 text-2xl">Cookies</h3>
         <p>
-          We employ the use of cookies. By accessing {/* */}shop.inherbz.com
+          We employ the use of cookies. By accessing {/* */}shop.ayurshoppee.com
           {/* */}, you agreed to use cookies in agreement with the {/* */}Genfor
           Global pvt ltd
           {/* */}'s Privacy Policy.{/* */}{" "}
@@ -52,40 +52,40 @@ const Terms = () => {
         </p>
         <h3 className="py-4 text-2xl">License</h3>
         <p>
-          Unless otherwise stated, {/* */}inherbz Health Care LLP{/* */} and/or
+          Unless otherwise stated, {/* */}AYURSHOPPEE ENTEURPRISES{/* */} and/or
           its licensors own the intellectual property rights for all material on{" "}
           {/* */}
-          shop.inherbz.com{/* */}. All intellectual property rights are
-          reserved. You may access this from {/* */}shop.inherbz.com{/* */} for
+          shop.ayurshopee.com{/* */}. All intellectual property rights are
+          reserved. You may access this from {/* */}shop.ayurshopee.com{/* */} for
           your own personal use subjected to restrictions set in these terms and
           conditions.
         </p>
         <p>You must not:</p>
         <ul>
-          <li>Republish material from {/* */}shop.inherbz.com</li>
+          <li>Republish material from {/* */}shop.ayurshoppee.com</li>
           <li>
-            Sell, rent or sub-license material from {/* */}shop.inherbz.com
+            Sell, rent or sub-license material from {/* */}shop.ayurshoppee.com
           </li>
           <li>
-            Reproduce, duplicate or copy material from {/* */}shop.inherbz.com
+            Reproduce, duplicate or copy material from {/* */}shop.ayurshoppee.com
           </li>
-          <li>Redistribute content from {/* */}shop.inherbz.com</li>
+          <li>Redistribute content from {/* */}shop.ayurshoppee.com</li>
         </ul>
         <p>
           Parts of this website offer an opportunity for users to post and
           exchange opinions and information in certain areas of the website.{" "}
-          {/* */}inherbz Health Care LLP{/* */}does not filter, edit, publish or
+          {/* */}AYURSHOPPEE ENTEURPRISES{/* */}does not filter, edit, publish or
           review Comments prior to their presence on the website. Comments do
-          not reflect the views and opinions of{/* */}inherbz Health Care LLP
+          not reflect the views and opinions of{/* */}AYURSHOPPEE ENTEURPRISES
           {/* */}, its agents and/or affiliates. Comments reflect the views and
           opinions of the person who post their views and opinions. To the
-          extent permitted by applicable laws, {/* */}inherbz Health Care LLP
+          extent permitted by applicable laws, {/* */}AYURSHOPPEE ENTEURPRISES
           {/* */} shall not be liable for the Comments or for any liability,
           damages or expenses caused and/or suffered as a result of any use of
           and/or posting of and/or appearance of the Comments on this website.
         </p>
         <p>
-          inherbz Health Care LLP{/* */} reserves the right to monitor all
+          AYURSHOPPEE ENTEURPRISES{/* */} reserves the right to monitor all
           Comments and to remove any Comments which can be considered
           inappropriate, offensive or causes breach of these Terms and
           Conditions.
@@ -112,7 +112,7 @@ const Terms = () => {
           </li>
         </ul>
         <p>
-          You hereby grant {/* */}inherbz Health Care LLP{/* */} a non-exclusive
+          You hereby grant {/* */}AYURSHOPPEE ENTEURPRISES{/* */} a non-exclusive
           license to use, reproduce, edit and authorize others to use, reproduce
           and edit any of your Comments in any and all forms, formats or media.
         </p>
@@ -173,7 +173,7 @@ const Terms = () => {
           <li>the organization does not have any negative records with us;</li>
           <li>
             the benefit to us from the visibility of the hyperlink compensates
-            the absence of {/* */}inherbz Health Care LLP{/* */}; and
+            the absence of {/* */}AYURSHOPPEE ENTEURPRISES{/* */}; and
           </li>
           <li>the link is in the context of general resource information.</li>
         </ul>
@@ -191,7 +191,7 @@ const Terms = () => {
         <p>
           If you are one of the organizations listed in paragraph 2 above and
           are interested in linking to our website, you must inform us by
-          sending an e-mail to {/* */}inherbz Health Care LLP{/* */}. Please
+          sending an e-mail to {/* */}AYURSHOPPEE ENTEURPRISES{/* */}. Please
           include your name, your organization name, contact information as well
           as the URL of your site, a list of any URLs from which you intend to
           link to our Website, and a list of the URLs on our site to which you
@@ -208,7 +208,7 @@ const Terms = () => {
           </li>
         </ul>
         <p>
-          No use of {/* */}inherbz Health Care LLP{/* */}'s logo or other
+          No use of {/* */}AYURSHOPPEE ENTEURPRISES{/* */}'s logo or other
           artwork will be allowed for linking absent a trademark license
           agreement.
         </p>

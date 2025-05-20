@@ -40,9 +40,10 @@ const PrivacyPolicy = () => {
           <li>
             <p>
               <strong>Company</strong> (referred to as either 'the Company',
-              'We', 'Us' or 'Our' in this Agreement) refers to {/* */}inherbz
-              Health Care LLP{/* */}, {/* */} PWD Road, Near SN Jn,
-              Nettoor(P.0), Marad, Ernakulam-Cochin, Kerala-682040{/* */}.
+              'We', 'Us' or 'Our' in this Agreement) refers to {/* */}
+              AYURSHOPPEE ENTEURPRISES{/* */}, {/* */} EDAPALLY TOLL JUNCTION
+              ERNAKULAM 682024 KERALA , INDIA
+              {/* */}.
             </p>
           </li>
           <li>
@@ -103,14 +104,14 @@ const PrivacyPolicy = () => {
           </li>
           <li>
             <p>
-              <strong>Website</strong> refers to {/* */}inherbz Health Care LLP
+              <strong>Website</strong> refers to {/* */}AYURSHOPPEE ENTEURPRISES
               {/* */}, accessible from{/* */}{" "}
               <a
-                href="https://shop.inherbz.com"
+                href=""
                 rel="external nofollow noopener noreferrer"
                 target="_blank"
               >
-                shop.inherbz.com
+                shop.ayurshoppee.com
               </a>
             </p>
           </li>
@@ -511,7 +512,7 @@ const PrivacyPolicy = () => {
           us:
         </p>
         <ul>
-          <li>By email: {/* */}hello@inherbz.com</li>
+          <li>By email: {/* */}info@ayurshoppee.com</li>
         </ul>
       </div>
     </>

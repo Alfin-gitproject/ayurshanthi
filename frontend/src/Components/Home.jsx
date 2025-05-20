@@ -158,7 +158,7 @@ function Home() {
 
   return (
     <>
-      <Metadata title={"Natural Products Online"} />
+      <Metadata title={"ayurshanthi"} />
       <div>
         {/* {!keyword && <Banners />} */}
         {!keyword && <AboutHome />}

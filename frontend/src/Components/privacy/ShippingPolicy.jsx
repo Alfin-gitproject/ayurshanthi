@@ -9,7 +9,7 @@ const ShippingPolicy = () => {
       <div className="dark:bg-gray-950 bg-base-100 p-6 rounded-lg shadow-md text-gray-900 dark:text-gray-50">
         <h2 className="text-2xl font-semibold mb-4">Shipping Policy</h2>
         <p className="mb-4">
-          Welcome to shop.inherbz.com, where we strive to make your shopping
+          Welcome to shop.ayurshanthi.com, where we strive to make your shopping
           experience smooth and convenient. Below is our detailed shipping
           policy to guide you through the process:
         </p>
@@ -61,7 +61,7 @@ const ShippingPolicy = () => {
             Your satisfaction is our top priority. For detailed information on
             our return and refund procedures, please refer to our dedicated{" "}
             <a
-              href="https://shop.inherbz.com/return_and_refund"
+              href="https://shop.ayurshanthi.com/return_and_refund"
               className="text-blue-500 hover:underline"
             >
               Return and Refund Policy
@@ -98,7 +98,7 @@ const ShippingPolicy = () => {
           </li>
         </ul>
         <p>
-          Thank you for choosing shop.inherbz.com for your shopping needs. If
+          Thank you for choosing shop.ayurshopee.com for your shopping needs. If
           you have any further questions or require assistance, please don't
           hesitate to reach out to our dedicated customer support team. We are
           here to assist you and ensure your shopping experience with us exceeds

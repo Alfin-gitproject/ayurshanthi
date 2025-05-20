@@ -2,4 +2,4 @@ cname details
 
 name-shop
 
-value-inherbz.onrender.com.
+value-ayurshanthi.onrender.com.

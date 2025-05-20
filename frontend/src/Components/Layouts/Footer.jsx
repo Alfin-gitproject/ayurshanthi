@@ -13,7 +13,7 @@ function Footer() {
             alt="footer logo"
           />
           <div className="flex gap-4 flex-wrap -ml-3 mt-3">
-            {/* <a href="#inherbz" target="blank">
+            {/* <a href="ayurshoppee" target="blank">
               <i className="fa-brands fa-x-twitter"></i>
             </a> */}
             <a href="https://www.facebook.com/inherbzwellness" target="blank">

@@ -123,10 +123,10 @@ const PaymentMethods = ({ onMethodSelection, couponValue, couponCodeNames }) => 
       key: key,
       amount: checkoutData.amount,
       currency: "INR",
-      name: "inHerbz",
+      name: "ayurshanthi",
       description: "",
       image:
-        "https://ik.imagekit.io/c1jhxlxiy/INherbz%20logo.webp?updatedAt=1719861969363",
+        "",
       order_id: checkoutData.id,
       // callback_url: "http://localhost:3000/api/v1/payment/webhook",
       handler: function (response) {

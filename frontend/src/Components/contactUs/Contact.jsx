@@ -40,13 +40,13 @@ const Contact = () => {
                     Our Address
                   </h3>
                   <p class="text-gray-700 dark:text-slate-700  normal-case">
-                     Health Care LLP PWD Road,
+                    AYURSHOPPEE ENTEURPRISES
                   </p>
                   <p class="text-gray-700 dark:text-slate-700  normal-case">
-                    Near SN Jn, Nettoor(P.0), Marad,
+                    EDAPALLY TOLL JUNCTION
                   </p>
                   <p class="text-gray-700 dark:text-slate-700 normal-case">
-                    Ernakulam-Cochin, Kerala-682040
+                    ERNAKULAM 682024 KERALA , INDIA
                   </p>
                 </div>
               </li>
@@ -74,7 +74,7 @@ const Contact = () => {
                     Contact
                   </h3>
                   <p class="text-gray-700 dark:text-slate-700 ">
-                    Mobile:+91 7034035102
+                    Mobile:+91 703 4035 102
                   </p>
                   <p class="text-gray-700 dark:text-slate-700 ">
                     Info@ayurshoppee.com

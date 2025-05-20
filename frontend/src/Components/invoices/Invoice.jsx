@@ -58,20 +58,20 @@ const Invoice = () => {
         <div className=" flex flex-col justify-center items-center">
           <img
             className="rounded-md"
-            src="https://ik.imagekit.io/c1jhxlxiy/INherbz%20logo.jpg?updatedAt=1719861995006"
+            src=""
             alt="logo"
             width={100}
           />
           <div className="flex flex-col justify-center items-center">
             <p className=" px-8  text-center text-sm">
-              inherbz Health Care LLP PWD Road, Near SN Jn, Nettoor(P.0), Marad,
-              Ernakulam-Cochin, Kerala-682040
+              AYURSHOPPEE ENTEURPRISES EDAPALLY TOLL JUNCTION ERNAKULAM 682024
+              KERALA , INDIA
             </p>
             <a
-              href="mailto:hello@inherbz.com"
+              href="mailto:info@ayurshoppee.com"
               className="underline text-center"
             >
-              hello@inherbz.com
+             info@ayurshoppee.com
             </a>
           </div>
         </div>
